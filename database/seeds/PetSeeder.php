@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Pet;
 
 class PetSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class PetSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $arrPets = config('pets');
+
+        foreach($arrPets as $pet) {
+            Pet::create($pet);
+        }
     }
 }
