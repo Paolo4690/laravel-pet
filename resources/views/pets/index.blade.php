@@ -7,7 +7,7 @@
     <ul>
         @foreach ($pets as $pet)
         <li>
-            <a href="{{ route('comics.show', $pet->id) }}">{{ $pet['age'] }} </a>
+            <a href="{{ route('pets.show', $pet->id) }}">{{ $pet['age'] }} </a>
         </li>
         @endforeach
     </ul>

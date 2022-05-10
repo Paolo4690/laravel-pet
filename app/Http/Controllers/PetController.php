@@ -14,9 +14,9 @@ class PetController extends Controller
      */
     public function index()
     {
-        $pets = Pet::where('id', '>', 0)->paginate(4);
+        $pets = Pet::paginate(5);
 
-        return view('index', compact('pets'));
+        return view('pets.index', compact('pets'));
     }
 
     /**
@@ -49,9 +49,9 @@ class PetController extends Controller
     public function show(Pet $pet)
     {
         // $pets = Pet::all();
-        return view('show', [
-            'pageTitle' => $pet->title,
-            'comic' => $pet,
+        return view('pets.show', [
+            'pageTitle' => $pet->name,
+            'pet' => $pet,
         ]);
     }
 
