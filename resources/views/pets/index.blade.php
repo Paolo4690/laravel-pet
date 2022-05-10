@@ -10,7 +10,7 @@
             <a href="{{ route('pets.show', $pet->id) }}">{{ $pet['age'] }} </a>
         </li>
         @endforeach
-        {{ $pets->links() }}
-    </ul>
 
+    </ul>
+    {{ $pets->links() }}
 @endsection
