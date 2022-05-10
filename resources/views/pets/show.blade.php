@@ -9,5 +9,6 @@
             {{ $pet['name'] }}, {{ $pet['species'] }}, {{ $pet['age'] }}
         </li>
     </ul>
+    <a href="{{ route('pets.index') }}">Back To Pets </a>
 
 @endsection
