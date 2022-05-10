@@ -1,5 +1,5 @@
 @extends('templates.base')
 @section('title', 'home')
 @section('content')
-    <main>Content goes here!</main>
+    <a href="{{ route('pets.index') }}">View Pets Listings</a>
 @endsection
