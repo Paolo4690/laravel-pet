@@ -3,12 +3,11 @@
 @section('title', $pageTitle)
 
 @section('content')
-
-    <ul>
-        <li>
-            {{ $pet['name'] }}, {{ $pet['species'] }}, {{ $pet['age'] }}
-        </li>
-    </ul>
-    <a href="{{ route('pets.index') }}">Back To Pets </a>
-
+    <div class="container d-flex justify-content-center my-5">
+        <ul>
+            <li class="border border-5 d-inline-block fs-3 p-3">
+                {{ $pet['name'] }}, {{ $pet['species'] }}, {{ $pet['age'] }}
+            </li>
+        </ul>
+    </div>
 @endsection
